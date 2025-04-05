@@ -15,8 +15,9 @@ const Hero: React.FC = () => {
   const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Custom cursor animation
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [_mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorHidden, setCursorHidden] = useState(true);
+  // const ss = mousePosition;
   
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -474,7 +475,7 @@ const Hero: React.FC = () => {
 // Counter animation component
 const CounterAnimation = ({ 
   value, 
-  plus = false,
+  // plus = false,
   children 
 }: { 
   value: number, 
@@ -487,7 +488,7 @@ const CounterAnimation = ({
     const duration = 2000; // 2 seconds
     const frameDuration = 1000 / 60; // 60fps
     const totalFrames = Math.round(duration / frameDuration);
-    const counter = Math.ceil(value / totalFrames);
+    // const counter = Math.ceil(value / totalFrames);
     
     let currentFrame = 0;
     const timer = setInterval(() => {
