@@ -57,21 +57,21 @@ const FeaturePair: React.FC<{ features: FeatureProps[]; gif: string; reverse: bo
 const Features: React.FC = () => {
   const featurePairs = [
     {
-      gif: 'src/assets/dapple.gif',
+      gif: 'https://github.com/akshayw1/dapple-web/blob/main/src/assets/dapple.gif?raw=truehttps://github.com/akshayw1/dapple-web/blob/main/src/assets/dapple.gif?raw=true',
       features: [
         { icon: <Brain className="w-full h-full" />, title: 'Personalized Learning', description: 'Tailored learning modules adapt to your unique strengths, challenges, and preferred learning style.', gradientColors: { from: '#6A5AE0', to: '#9E94EB' } },
         { icon: <Users className="w-full h-full" />, title: 'Supportive Community', description: 'Connect with peers, share experiences, and receive support from therapists and other users.', gradientColors: { from: '#FFD166', to: '#FFBD59' } },
       ],
     },
     {
-      gif: 'src/assets/talkwithexpert1.gif',
+      gif: 'https://github.com/akshayw1/dapple-web/blob/main/src/assets/talkwithexpert1.gif?raw=true',
       features: [
         { icon: <Bot className="w-full h-full" />, title: 'AI-Driven Role-Play', description: 'Practice conversations and social interactions with AI scenarios and receive real-time feedback.', gradientColors: { from: '#00CEC9', to: '#4FD1C5' } },
         { icon: <MessageSquare className="w-full h-full" />, title: 'Virtual Therapy', description: 'Access one-on-one and group therapy sessions with licensed professionals from your device.', gradientColors: { from: '#9E94EB', to: '#F687B3' } },
       ],
     },
     {
-      gif: 'src/assets/callai.gif',
+      gif: 'https://github.com/akshayw1/dapple-web/blob/main/src/assets/callai.gif?raw=true',
       features: [
         { icon: <CheckSquare className="w-full h-full" />, title: 'Productivity Tools', description: 'Stay organized with Pomodoro timers, visual schedules, and AI-driven focus features.', gradientColors: { from: '#FFD166', to: '#F97316' } },
         { icon: <MessageCircle className="w-full h-full" />, title: 'Communication Aids', description: 'Help Cards and visual communication tools assist non-verbal users in expressing needs effectively.', gradientColors: { from: '#00CEC9', to: '#10B981' } },
