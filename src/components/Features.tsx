@@ -337,7 +337,7 @@ const Features: React.FC = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.1 } }
               }}
             >
-              Join thousands of users who have discovered a more personalized, supportive, and effective learning experience.
+              Join and discovered a more personalized, supportive, and effective learning experience.
             </motion.p>
 
             <motion.button

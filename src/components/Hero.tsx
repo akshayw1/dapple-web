@@ -161,7 +161,7 @@ const Hero: React.FC = () => {
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-[#9E94EB] to-[#6A5AE0] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <Apple className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
-                <span className="relative z-10">App Store</span>
+                <span className="relative z-10">Download for Apple</span>
                 <motion.span 
                   className="absolute right-0 -bottom-10 w-20 h-20 rounded-full bg-white/10 blur-xl"
                   animate={{ 
@@ -186,7 +186,7 @@ const Hero: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Play className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
-                <span className="relative z-10">Google Play</span>
+                <span className="relative z-10">Download for Android</span>
                 <span className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </motion.a>
             </motion.div>
@@ -198,19 +198,7 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <motion.div 
-                className="p-4 rounded-lg bg-white/5 backdrop-blur-lg border border-white/10"
-                whileHover={{ scale: 1.03, backgroundColor: "rgba(255,255,255,0.08)" }}
-                onMouseEnter={() => handleMouseEnter('stat')}
-                onMouseLeave={handleMouseLeave}
-              >
-                <CounterAnimation value={5000} plus={true}>
-                  {(value) => (
-                    <div className="text-2xl font-bold text-white">{value}+</div>
-                  )}
-                </CounterAnimation>
-                <div className="text-sm text-gray-400">Active Users</div>
-              </motion.div>
+            
               
               <motion.div 
                 className="p-4 rounded-lg bg-white/5 backdrop-blur-lg border border-white/10"
@@ -237,7 +225,7 @@ const Hero: React.FC = () => {
                     <div className="text-2xl font-bold text-white">{value}/7</div>
                   )}
                 </CounterAnimation>
-                <div className="text-sm text-gray-400">Support</div>
+                <div className="text-sm text-gray-400">Social Inclusivity</div>
               </motion.div>
             </motion.div>
           </motion.div>

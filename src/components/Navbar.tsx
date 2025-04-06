@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
           
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {['Features', 'How It Works', 'Testimonials', 'Pricing'].map((item, index) => (
+            {['Features', 'How It Works'].map((item, index) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
