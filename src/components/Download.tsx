@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Apple, Play } from 'lucide-react';
+import { Apple, Download as DownloadIcon } from 'lucide-react';
 import dappleWaving from '../assets/dapple-waving.png';
 
 const Download: React.FC = () => {
@@ -9,6 +9,16 @@ const Download: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const handleDownload = () => {
+    // Direct link to the APK file on GitHub
+    window.location.href = "https://github.com/akshayw1/dapple-web/raw/main/src/assets/app-release.apk";
+  };
+  const handleAppleDownload = () => {
+    // Placeholder for Apple download
+    alert("Apple version coming soon!");
+  };
+
 
   return (
     <section 
@@ -44,25 +54,27 @@ const Download: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-8">
               <motion.a 
-                href="#" 
-                className="group bg-[#6A5AE0] hover:bg-[#5949d8] transition-colors rounded-xl px-8 py-4 flex items-center shadow-lg shadow-[#6A5AE0]/20"
+                onClick={handleAppleDownload}
+                className="group bg-[#6A5AE0] hover:bg-[#5949d8] transition-colors rounded-xl px-8 py-4 flex items-center shadow-lg disabled shadow-[#6A5AE0]/20"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 <Apple className="h-8 w-8 mr-4 text-white" />
                 <div className="text-left text-white">
                   <span className="block text-sm font-medium">Download for</span>
-                  <span className="block text-xl font-bold">Apple</span>
+                  <span className="block text-xl font-bold">Apple (Soooon )</span>
                 </div>
               </motion.a>
               
               <motion.a 
-                href="#" 
+                onClick={handleDownload}
+                href="https://github.com/akshayw1/dapple-web/raw/main/src/assets/app-release.apk"
+                download="Dapple.apk"
                 className="group bg-white hover:bg-gray-50 transition-colors rounded-xl px-8 py-4 flex items-center border-2 border-[#6A5AE0] shadow-lg shadow-[#6A5AE0]/10"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <Play className="h-8 w-8 mr-4 text-[#6A5AE0]" />
+                <DownloadIcon className="h-8 w-8 mr-4 text-[#6A5AE0]" />
                 <div className="text-left text-[#6A5AE0]">
                   <span className="block text-sm font-medium">Download for</span>
                   <span className="block text-xl font-bold">Android</span>
@@ -70,7 +82,9 @@ const Download: React.FC = () => {
               </motion.a>
             </div>
             
-          
+            <p className="text-sm text-gray-600 mt-4">
+              By downloading, you agree to our Terms of Service and Privacy Policy.
+            </p>
           </motion.div>
           
           <motion.div 
