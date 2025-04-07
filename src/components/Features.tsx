@@ -158,7 +158,7 @@ const SpotlightEffect: React.FC = () => {
 // Enhanced feature card with hover effects
 const FeatureCard: React.FC<FeatureProps> = ({ icon, title, description, gradientColors }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [ref, inView] = useInView({
+  const [ref, _inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
